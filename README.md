@@ -25,6 +25,27 @@ all.
 A `Collection` object is also an `EventEmitter`.
 
 
+### collection.configure([options])
+
+* `options` (`Object`) contains configurations options to be changed
+  * `expireKeys` (`Number`) seconds after which keys in this
+    collection are to be expired.
+
+Set configuration options for the collection.
+
+Currently only one configurable option is supported: `expireKeys`. When set
+to a nonzero value, keys will automatically expire after they've not been
+read or updated for some time. The timeout is specified in seconds. There's no
+guarantee that the key will be discared after exactly that number of seconds
+has passed. However keys will never be automatically deleted _sooner_ than what
+the `expireKeys` setting allows.
+
+It is perfectly legal to call the `configure` method from multiple node
+processes (e.g. both in a worker and in the master process). However you
+should be careful to set the _same_ option values every time, otherwise the
+effect is undefined.
+
+
 ### collection.get(key, callback)
 
 * `key` (`String`) key to retrieve

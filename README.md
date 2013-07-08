@@ -15,12 +15,13 @@ Returns a Collection object which lets you share data between node processes.
 
 ## Class: Collection
 
-A `Collection` instance acts lets you access a shared key-valyue store
-identified by a particular name or URI. Collections created by
-strong-store-cluster are stored by the master process in a node cluster
-that's created with the builtin `cluster` module. It also works if
-you're just running a single node instance without touching cluster at
-all.
+A `Collection` instance provides access to a shared key-value store
+shared by multiple node instances.
+
+How collections are named and stored is determined by the storage backend. The
+`strong-store-cluster` implementation stores collections in the master process
+(if you're using cluster), and accepts any arbitrary string as a collection
+name.
 
 A `Collection` object is also an `EventEmitter`.
 
@@ -115,8 +116,8 @@ The error event is emitted whenever an unrecoverable error is encountered.
 
 ## Class: KeyLock
 
-A `KeyLock` instance represents a key that has been locked. The KeyLock
-class implements methods that let's you manipulate the key and release
+A `KeyLock` instance represents a key that has been locked. The `KeyLock`
+class implements methods that lets you manipulate the key and release
 the lock.
 
 

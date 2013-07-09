@@ -1,0 +1,27 @@
+{
+  "name": "strong-store-cluster",
+  "version": "0.1.0",
+  "description": "In-memory key/value store for the node's native cluster.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strongloop/strong-store-cluster.git"
+  },
+  "keywords": [
+    "cluster",
+    "store"
+  ],
+  "author": {
+    "name": "Bert Belder",
+    "email": "bert@strongloop.com"
+  },
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "c0a53889dd6d619076d9d9c2c648b5ba9d3f815f",
+  "bugs": {
+    "url": "https://github.com/strongloop/strong-store-cluster/issues"
+  }
+}

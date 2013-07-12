@@ -18,7 +18,7 @@
     "name": "Bert Belder",
     "email": "bert@strongloop.com"
   },
-  "license": "BSD",
+  "license": "MIT",
   "readmeFilename": "README.md",
   "gitHead": "c0a53889dd6d619076d9d9c2c648b5ba9d3f815f",
   "bugs": {

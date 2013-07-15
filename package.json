@@ -20,6 +20,9 @@
     "url": "https://github.com/strongloop/strong-store-cluster/issues"
   },
   "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec --timeout 5000 --slow 1000 --ui tdd"
+  },
   "devDependencies": {
     "mocha": "~1.9.0"
   },

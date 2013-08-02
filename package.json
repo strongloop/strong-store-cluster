@@ -21,9 +21,14 @@
   },
   "main": "index.js",
   "scripts": {
+    "blanket": {
+      "pattern": "//^((?!(node_modules|test)).)*$/"
+    },
+    "coverage": "mocha -r blanket -R html-cov > coverage_strong-store-cluster.html",
     "test": "mocha --reporter spec --timeout 5000 --slow 1000 --ui tdd"
   },
   "devDependencies": {
+    "blanket": "latest",
     "mocha": "~1.9.0"
   },
   "engines": {

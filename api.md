@@ -1,8 +1,8 @@
-### store.collection(name)
+## store.collection(name)
 
 Returns a Collection object which lets you share data between node processes.
 
-### Class: Collection
+## Collection class
 
 A `Collection` instance provides access to a shared key-value store
 shared by multiple node instances.
@@ -14,6 +14,7 @@ name.
 
 A `Collection` object is also an `EventEmitter`.
 
+### Methods
 
 #### collection.configure([options])
 
@@ -35,7 +36,6 @@ processes (e.g. both in a worker and in the master process). However you
 should be careful to set the _same_ option values every time, otherwise the
 effect is undefined.
 
-
 #### collection.get(key, callback)
 
 * `key` (`String`) key to retrieve
@@ -44,7 +44,6 @@ effect is undefined.
 Read the value associated with a particular key. The callback is called with
 two arguments, `(err, value)`. When the key wasn't found in the collection, it
 is automatically created and it's `value` is set to `undefined`.
-
 
 #### collection.set(key, [value], [callback])
 
@@ -62,7 +61,6 @@ The `callback` function receives only one argument, `err`. When the
 callback is omitted, the master process does not send a confirmation
 after updating the key, and any errors are silently ignored.
 
-
 #### collection.del(key, [callback])
 
 * `key` (`String`) key to delete
@@ -75,7 +73,6 @@ This operation is the equivalent of setting the key to `undefined`.
 The `callback` function receives only one argument, `err`. When the
 callback is omitted, the master process does not send a confirmation
 after deleting the key, and any errors are silently ignored.
-
 
 #### collection.acquire(key, callback)
 
@@ -95,19 +92,21 @@ instance, which lets you read and manipulate the key's value as well as
 eventually release the lock. The `value` argument is set to the initial value
 associated with the key.
 
+## Events
 
-#### Event: 'error'
+### 'error'
 
 * `err` (`Error`)
 
 The error event is emitted whenever an unrecoverable error is encountered.
 
-### Class: KeyLock
+## KeyLock class
 
 A `KeyLock` instance represents a key that has been locked. The `KeyLock`
 class implements methods that lets you manipulate the key and release
 the lock.
 
+### Methods 
 
 #### keylock.get()
 
@@ -119,7 +118,6 @@ key.
 Initially this is the same as the `value` argument that was passed to the
 `collection.acquire()` callback, but it does immediately reflect changes that
 are made with `keylock.set()` and `keylock.del()`.
-
 
 #### keylock.set([value])
 
@@ -135,11 +133,9 @@ After the lock has been released, the key can no longer be updated through the
 Setting the value to `undefined` marks the key for deletion, e.g. it's
 equivalent to `keylock.del()`.
 
-
 #### keylock.del()
 
 Mark a locked key for deletion. See `keylock.set()`.
-
 
 #### keylock.release([callback])
 

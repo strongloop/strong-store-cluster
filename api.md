@@ -92,9 +92,9 @@ instance, which lets you read and manipulate the key's value as well as
 eventually release the lock. The `value` argument is set to the initial value
 associated with the key.
 
-## Events
+### Events
 
-### 'error'
+#### 'error'
 
 * `err` (`Error`)
 

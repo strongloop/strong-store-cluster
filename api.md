@@ -1,5 +1,3 @@
-## API documentation
-
 ### store.collection(name)
 
 Returns a Collection object which lets you share data between node processes.

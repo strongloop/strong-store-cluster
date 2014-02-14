@@ -3,7 +3,10 @@
   "version": "0.1.3",
   "description": "In-memory key/value store for the node's native cluster.",
   "readmeFilename": "README.md",
-  "license": "MIT",
+  "license": {
+    "name": "Dual MIT/StrongLoop",
+    "url": "https://github.com/strongloop/strong-store-cluster/blob/master/LICENSE"
+  },
   "keywords": [
     "cluster",
     "store"

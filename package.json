@@ -5,7 +5,8 @@
   "readmeFilename": "README.md",
   "license": {
     "name": "Dual Artistic/StrongLoop",
-    "url": "https://github.com/strongloop/strong-store-cluster/blob/master/LICENSE"
+    "url":
+    "https://github.com/strongloop/strong-store-cluster/blob/master/LICENSE.md"
   },
   "keywords": [
     "cluster",

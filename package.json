@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "In-memory key/value store for the node's native cluster.",
   "readmeFilename": "README.md",
-  "license": {
-    "name": "Dual Artistic/StrongLoop",
-    "url": "https://github.com/strongloop/strong-store-cluster/blob/master/LICENSE.md"
-  },
+  "license": "Artistic-2.0",
   "keywords": [
     "cluster",
     "store"

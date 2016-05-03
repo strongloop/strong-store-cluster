@@ -1,6 +1,6 @@
 {
   "name": "strong-store-cluster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "In-memory key/value store for the node's native cluster.",
   "readmeFilename": "README.md",
   "license": "Artistic-2.0",

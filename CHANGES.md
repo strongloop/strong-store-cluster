@@ -1,3 +1,15 @@
+2016-05-03, Version 1.0.1
+=========================
+
+ * insert/update copyright notices (Ryan Graham)
+
+ * relicense as Artistic-2.0 only (Ryan Graham)
+
+ * Refer to licenses with a link (Sam Roberts)
+
+ * Use strongloop conventions for licensing (Sam Roberts)
+
+
 2015-03-23, Version 1.0.0
 =========================
 
